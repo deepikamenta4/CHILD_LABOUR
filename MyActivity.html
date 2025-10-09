@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Activity</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset and Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 15px;
+    }
+
+    /* Header */
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 50px;
+      text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    }
+
+    /* Container */
+    .activity-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    /* Activity Cards */
+    .activity-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 30px 20px;
+      text-align: center;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .activity-card::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 0deg, #ff8a00, #e52e71, #4facfe, #43e97b, #ff8a00);
+      opacity: 0.25;
+      animation: rotate 7s linear infinite;
+    }
+
+    .activity-card a {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      padding: 8px 20px;
+      margin-top: 15px;
+      border-radius: 25px;
+      background: linear-gradient(45deg, #43e97b, #38f9d7);
+      box-shadow: 0 5px 15px rgba(56,249,215,0.4);
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .activity-card a:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 8px 18px rgba(56,249,215,0.6);
+    }
+
+    .activity-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.45);
+    }
+
+    /* Animation for Gradient */
+    @keyframes rotate {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2rem; }
+      .activity-card a { font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Activity</h1>
+
+  <div class="activity-container">
+    <div class="activity-card">
+      <div>Week 1</div>
+      <a href="week 1.html">View</a>
+    </div>
+
+    <div class="activity-card">
+      <div>Week 2</div>
+      <a href="week 2.html">View</a>
+    </div>
+
+    <div class="activity-card">
+      <div>Week 3</div>
+      <a href="week 3.html">View</a>
+    </div>
+
+    <div class="activity-card">
+      <div>Week 4</div>
+      <a href="week 4.html">View</a>
+    </div>
+
+    <div class="activity-card">
+      <div>Week 5</div>
+      <a href="week 5.html">View</a>
+    </div>
+
+        </div>
+  </div>
+
+</body>
+</html>
